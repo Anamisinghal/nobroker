@@ -1,0 +1,65 @@
+body {
+  min-height: 100%;
+  background: rgba(128, 128, 128, 0.05);
+}
+
+.main-page {
+  min-height: 90%;
+  margin: 2em;
+  text-align: center;
+  background: #fff;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100%;
+}
+
+.flex-col {
+  flex: 1;
+  margin: .2em;
+  border-radius: 1em;
+  border: 0.04em solid rgba(80, 78, 78, 0.122);
+  .title {
+    background: rgb(43, 43, 94);
+    border-radius: 1em 1em 0 0;
+    color: #fff;
+    font-weight: 600;
+    padding: .6em;
+  }
+  .menu-section {
+    flex: 0 0 100%;
+    justify-content: flex-end;
+    display: flex;
+    padding: .4em;
+    border-bottom: .04em solid #ebeaea;
+    .option {
+      margin: 0 .4em;
+    }
+  }
+  .card {
+    background: rgba(218, 216, 216, 0.059);
+    border: .04em solid #ebeaea;
+    border-radius: .5em;
+    margin: .2em;
+    display: flex;
+    padding: .5em;
+    .left-section {
+      display: flex;
+      flex: 0 0 60%;
+      font-size: 1em;
+      padding: inherit;
+      h2 {
+        line-height: .6em;
+      }
+    }
+    .right-section {
+      flex: 40%;
+      font-size: .8em;
+      padding: inherit;
+    }
+  }
+}
+
+label {
+  width: 8em;
+}

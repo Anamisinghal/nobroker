@@ -1,0 +1,21 @@
+<div class="title">
+    {{colTitle}}
+</div>
+<div class="menu-section">
+    <img ng-src="./../assets/images/plus-icon.png" height="16px" title="add Item" class="option" ng-click="addItem($event)">
+    <img src="./../assets/images/minus-icon.png" height="16px" title="remove Item" class="option" ng-click="removeItem()">
+
+</div>
+
+<div class="card-container" ng-if="items[colTitle].length" dnd-list="items">
+    <div class="card" ng-repeat="item in items[colTitle]" ng-click="selected(item.id)" ng-if="!item.deleted" dnd-draggable="item"
+        dnd-effect-allowed="move" dnd-moved="items.splice($index, 1)" dnd-selected="selectedItem = item">
+        <div class="left-section">
+            <h2>{{item.name}}</h2>
+        </div>
+        <div class="right-section">
+            <p> {{item.assignee}}</p>
+            <p> time: {{item.estimation}}</p>
+        </div>
+    </div>
+</div>
